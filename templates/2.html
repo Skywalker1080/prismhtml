@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="col-container">
+        <!- replace _ with your db dataframe ->
+        {{% for coin in coins }} %
+        <div class="col">
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col">
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="{{  }}" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{  }}</div>
+                    <div class="pct-change" style="color: {% if coin.pct_change > 0 %}green{% elif coin.pct_change < 0 %}red{% else %}black{% endif %};">{{  }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{  }}</div>
+                    <div class="m-cap">{{  }}</div>
+                </div>
+            </div>
+        </div>
+
+        {{% endfor %}}
+    </div>
+</body>
+</html>

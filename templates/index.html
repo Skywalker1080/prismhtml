@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header" style="padding: 25px 50px;">LAST UPDATE: 2024-12-20</div>
+    <div class="top-bar">
+        <div class="header-card">
+            <div class="coin-stat">
+                <div style="display: flex; gap: 240px; font-size: 26px;">
+                    <h4>BTC</h4>
+                    <h4>$90000</h4>
+                </div>
+                <div style="display: flex; gap: 200px; font-size: 20px;">
+                    <h4>Market Cap</h4>
+                    <h4>$1.92 T</h4>
+                </div>
+                <div style="display: flex; gap: 185px; font-size: 20px;">
+                    <h4>Volume 24H</h4>
+                    <h4>$97.25 B</h4>
+                </div>
+                <div style="display: flex; gap: 80px; font-size: 20px;">
+                    <h4>1D</h4>
+                    <h4>7D</h4>
+                    <h4>30D</h4>
+                    <h4>YTD</h4>
+                </div>
+                <div style="display: flex; gap: 65px; font-size: 15px;">
+                    <h4 style="color: #ff0000;">-3.48%</h4>
+                    <h4 style="color: #00ff2f;">12.24%</h4>
+                    <h4 style="color: #ff0000;">-3%</h4>
+                    <h4 style="color: #00ff2f;">120.07%</h4>
+                </div>
+                
+            </div>
+            <div class="coin-stat">
+                <div style="display: flex; gap: 50px; justify-content: space-evenly; font-size: 26px;">
+                    <div style="color: #ff0000;">Bearish</div>
+                    <div>|</div>
+                    <div style="color: #ffb338;">Neutral</div>
+                    <div>|</div>
+                    <div style="color: #00ff2f;">Bullish</div>
+                </div>
+                <div style="display: flex; gap: 150px; justify-content: space-between; font-size: 45px; font-weight: bolder;">
+                    <div style="color: #ff0000;">4</div>
+                    <div style="color: #ffb338;">4</div>
+                    <div style="color: #00ff2f;">12</div>
+                </div>
+                <div>
+                    <div style="padding-left: 375px; font-size: 25px; font-weight: bold;">Trend</div>
+                    <div style="padding-left: 355px; font-size: 30px; color: #00ff2f; font-weight: bolder;">Bullish</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-container">
+        {% for coin in coins %}
+        <div class="col">
+            <div class="coin-card">
+
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{coin['coin_name']}}</div>
+                    <div class="pct-change">{{coin['pct_change']}}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">{{coin['coin_price']}}</div>
+                    <div class="m-cap">{{coin['coin_mcap']}}</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">BTC</div>
+                    <div class="pct-change">-2.36%</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">$90187.05</div>
+                    <div class="m-cap">$1.92T</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
