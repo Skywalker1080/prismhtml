@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header" style="padding: 25px 50px;">LAST UPDATE: 2024-12-20</div>
+    <div class="header" style="padding: 25px 50px;">LAST UPDATE:</div>
     <div class="top-bar">
         <div class="header-card">
             <div class="coin-stat">
@@ -61,96 +61,18 @@
     </div>
 
     <div class="col-container">
-        {% for coin in coins %}
-        <div class="col">
-            <div class="coin-card">
-
-                <div class="logo">
-                    <img src="Bitcoin.svg.png" alt="Coin logo">
-                </div>
-                <div class="name">
-                    <div class="coin-name">{{coin['coin_name']}}</div>
-                    <div class="pct-change">{{coin['pct_change']}}</div>
-                </div>
-                <div class="price">
-                    <div class="coin-price">{{coin['coin_price']}}</div>
-                    <div class="m-cap">{{coin['coin_mcap']}}</div>
-                </div>
-            </div>
-
-            <div class="coin-card">
-                
-                <div class="logo">
-                    <img src="Bitcoin.svg.png" alt="Coin logo">
-                </div>
-                <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
-                </div>
-                <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
-                </div>
-            </div>
-
-            <div class="coin-card">
-                
-                <div class="logo">
-                    <img src="Bitcoin.svg.png" alt="Coin logo">
-                </div>
-                <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
-                </div>
-                <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
-                </div>
-            </div>
-
-            <div class="coin-card">
-                
-                <div class="logo">
-                    <img src="Bitcoin.svg.png" alt="Coin logo">
-                </div>
-                <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
-                </div>
-                <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
-                </div>
-            </div>
-
-            <div class="coin-card">
-                
-                <div class="logo">
-                    <img src="Bitcoin.svg.png" alt="Coin logo">
-                </div>
-                <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
-                </div>
-                <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
-                </div>
-            </div>
-        </div>
-
         <div class="col">
             <div class="coin-card">
                 <div class="logo">
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[0]['symbol']}}</div>
+                    <div class="pct-change">{{ coins[0]['percent_change24h'] | round(2)}}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[0]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[0]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -159,12 +81,12 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[1]['symbol']}}</div>
+                    <div class="pct-change">{{ coins[1]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[1]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[1]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -173,12 +95,12 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[2]['symbol']}}</div>
+                    <div class="pct-change">{{ coins[2]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[2]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[2]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -187,12 +109,12 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[3]['symbol']}}</div>
+                    <div class="pct-change">{{ coins[3]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[3]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[3]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -201,28 +123,29 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[4]['symbol']}}</div>
+                    <div class="pct-change">{{ coins[4]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[4]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[4]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
         </div>
 
         <div class="col">
+
             <div class="coin-card">
                 <div class="logo">
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[5]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[5]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[5]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[5]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -231,12 +154,12 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[6]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[6]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[6]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[6]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -245,12 +168,12 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[7]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[7]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[7]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[7]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -259,12 +182,12 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[8]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[8]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[8]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[8]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
 
@@ -273,16 +196,88 @@
                     <img src="Bitcoin.svg.png" alt="Coin logo">
                 </div>
                 <div class="name">
-                    <div class="coin-name">BTC</div>
-                    <div class="pct-change">-2.36%</div>
+                    <div class="coin-name">{{ coins[9]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[9]['percent_change24h'] | round(2) }}</div>
                 </div>
                 <div class="price">
-                    <div class="coin-price">$90187.05</div>
-                    <div class="m-cap">$1.92T</div>
+                    <div class="coin-price">${{ coins[9]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[9]['market_cap'] | round(2) }} B</div>
                 </div>
             </div>
         </div>
-        {% endfor %}
+
+        <div class="col">
+       
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{ coins[10]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[10]['percent_change24h'] | round(2) }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">${{ coins[10]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[10]['market_cap'] | round(2) }} B</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{ coins[11]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[11]['percent_change24h'] | round(2) }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">${{ coins[11]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[11]['market_cap'] | round(2) }} B</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{ coins[12]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[12]['percent_change24h'] | round(2) }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">${{ coins[12]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[12]['market_cap'] | round(2) }} B</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{ coins[13]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[13]['percent_change24h'] | round(2) }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">${{ coins[13]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[13]['market_cap'] | round(2) }} B</div>
+                </div>
+            </div>
+
+            <div class="coin-card">
+                <div class="logo">
+                    <img src="Bitcoin.svg.png" alt="Coin logo">
+                </div>
+                <div class="name">
+                    <div class="coin-name">{{ coins[14]['symbol'] }}</div>
+                    <div class="pct-change">{{ coins[14]['percent_change24h'] | round(2) }}</div>
+                </div>
+                <div class="price">
+                    <div class="coin-price">${{ coins[14]['price'] | round(2) }}</div>
+                    <div class="m-cap">{{ coins[14]['market_cap'] | round(2) }} B</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
