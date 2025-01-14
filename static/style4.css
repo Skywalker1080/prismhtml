@@ -4,7 +4,7 @@ html, body {
     margin: 0 auto;
     padding: 0;
     overflow: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('4_layout.png');
+    background-image: url('4_layout.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,3 +40,6 @@ html, body {
     align-items: center;
     height: 100vh;
 }
+
+.positive { color: green; }
+.negative { color: red; }

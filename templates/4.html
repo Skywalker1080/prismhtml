@@ -11,19 +11,20 @@
     <div class="div-container" style="display: flex; gap: 100px; margin-top: 200px;">
 
         <div class="col-container">
+            {% for coin in coins1 %}
             <div class="col">
                 <div style="display: flex; gap: 15px;">
                     <div class="logo">
-                        <img src="Bitcoin.svg.png">
+                        <img src="{{ coin.logo }}">
                     </div>
                     <div>
                         <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
+                            <div>{{ coin.symbol }}</div>
+                            <div>$ {{ coin.price}}</div>
                         </div>
                         <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
+                            <div>#{{ coin.cmc_rank }}</div>
+                            <div>${{ coin.market_cap }} B</div>
                         </div>
                     </div>
                 </div>
@@ -31,185 +32,55 @@
                     <div style="display: flex; flex-direction: column;">
                         <div style="display: flex; gap: 50px;">
                             <div>α</div>
-                            <div>0.76</div>
+                            <div>{{ coin.m_rat_alpha }}</div>
                         </div>
                         <div style="display: flex; gap: 50px;">
                             <div>β</div>
-                            <div>0.65</div>
+                            <div>{{ coin.d_rat_beta }}</div>
                         </div>
                         <div style="display: flex; gap: 50px;">
                             <div>Ω</div>
-                            <div>0.44</div>
+                            <div>{{ coin.m_rat_omega }}</div>
                         </div>
                     </div>
                         <div style="display: flex; flex-direction: column;">
                         <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
                             <div>1D</div>
                             <div>7D</div>
-                            <div>3D</div>
+                            <div>30D</div>
                         </div>
                         <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
+                            <div class="{% if coin.percent_change24h > 0 %}positive{% else %}negative{% endif %}">
+                                {{ coin.percent_change24h }}%
+                            </div>
+                            <div class="{% if coin.percent_change7d > 0 %}positive{% else %}negative{% endif %}">
+                                {{ coin.percent_change7d }}%
+                            </div>
+                            <div class="{% if coin.percent_change30d > 0 %}positive{% else %}negative{% endif %}">
+                                {{ coin.percent_change30d }}%
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col">
-                <div style="display: flex; gap: 15px;">
-                    <div class="logo">
-                        <img src="Bitcoin.svg.png">
-                    </div>
-                    <div>
-                        <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
-                        </div>
-                        <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 30px;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 50px;">
-                            <div>α</div>
-                            <div>0.76</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>β</div>
-                            <div>0.65</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>Ω</div>
-                            <div>0.44</div>
-                        </div>
-                    </div>
-                        <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
-                            <div>1D</div>
-                            <div>7D</div>
-                            <div>3D</div>
-                        </div>
-                        <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div style="display: flex; gap: 15px;">
-                    <div class="logo">
-                        <img src="Bitcoin.svg.png">
-                    </div>
-                    <div>
-                        <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
-                        </div>
-                        <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 30px;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 50px;">
-                            <div>α</div>
-                            <div>0.76</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>β</div>
-                            <div>0.65</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>Ω</div>
-                            <div>0.44</div>
-                        </div>
-                    </div>
-                        <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
-                            <div>1D</div>
-                            <div>7D</div>
-                            <div>3D</div>
-                        </div>
-                        <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div style="display: flex; gap: 15px;">
-                    <div class="logo">
-                        <img src="Bitcoin.svg.png">
-                    </div>
-                    <div>
-                        <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
-                        </div>
-                        <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 30px;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 50px;">
-                            <div>α</div>
-                            <div>0.76</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>β</div>
-                            <div>0.65</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>Ω</div>
-                            <div>0.44</div>
-                        </div>
-                    </div>
-                        <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
-                            <div>1D</div>
-                            <div>7D</div>
-                            <div>3D</div>
-                        </div>
-                        <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <div class="col-container">
+            {% for coin in coins2 %}
             <div class="col">
                 <div style="display: flex; gap: 15px;">
                     <div class="logo">
-                        <img src="Bitcoin.svg.png">
+                        <img src="{{ coin.logo }}">
                     </div>
                     <div>
                         <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
+                            <div>{{ coin.symbol }}</div>
+                            <div>$ {{ coin.price}}</div>
                         </div>
                         <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
+                            <div>#{{ coin.cmc_rank }}</div>
+                            <div>${{ coin.market_cap }} B</div>
                         </div>
                     </div>
                 </div>
@@ -217,169 +88,38 @@
                     <div style="display: flex; flex-direction: column;">
                         <div style="display: flex; gap: 50px;">
                             <div>α</div>
-                            <div>0.76</div>
+                            <div>{{ coin.m_rat_alpha }}</div>
                         </div>
                         <div style="display: flex; gap: 50px;">
                             <div>β</div>
-                            <div>0.65</div>
+                            <div>{{ coin.d_rat_beta }}</div>
                         </div>
                         <div style="display: flex; gap: 50px;">
                             <div>Ω</div>
-                            <div>0.44</div>
+                            <div>{{ coin.m_rat_omega }}</div>
                         </div>
                     </div>
                         <div style="display: flex; flex-direction: column;">
                         <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
                             <div>1D</div>
                             <div>7D</div>
-                            <div>3D</div>
+                            <div>30D</div>
                         </div>
                         <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
+                            <div class="{% if coin.percent_change24h > 0 %}positive{% else %}negative{% endif %}">
+                                {{ coin.percent_change24h }}%
+                            </div>
+                            <div class="{% if coin.percent_change7d > 0 %}positive{% else %}negative{% endif %}">
+                                {{ coin.percent_change7d }}%
+                            </div>
+                            <div class="{% if coin.percent_change30d > 0 %}positive{% else %}negative{% endif %}">
+                                {{ coin.percent_change30d }}%
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col">
-                <div style="display: flex; gap: 15px;">
-                    <div class="logo">
-                        <img src="Bitcoin.svg.png">
-                    </div>
-                    <div>
-                        <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
-                        </div>
-                        <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 30px;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 50px;">
-                            <div>α</div>
-                            <div>0.76</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>β</div>
-                            <div>0.65</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>Ω</div>
-                            <div>0.44</div>
-                        </div>
-                    </div>
-                        <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
-                            <div>1D</div>
-                            <div>7D</div>
-                            <div>3D</div>
-                        </div>
-                        <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div style="display: flex; gap: 15px;">
-                    <div class="logo">
-                        <img src="Bitcoin.svg.png">
-                    </div>
-                    <div>
-                        <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
-                        </div>
-                        <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 30px;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 50px;">
-                            <div>α</div>
-                            <div>0.76</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>β</div>
-                            <div>0.65</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>Ω</div>
-                            <div>0.44</div>
-                        </div>
-                    </div>
-                        <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
-                            <div>1D</div>
-                            <div>7D</div>
-                            <div>3D</div>
-                        </div>
-                        <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div style="display: flex; gap: 15px;">
-                    <div class="logo">
-                        <img src="Bitcoin.svg.png">
-                    </div>
-                    <div>
-                        <div style="display: flex; gap: 250px;">
-                            <div>BGB</div>
-                            <div>$4.4162</div>
-                        </div>
-                        <div style="display: flex; gap: 255px;">
-                            <div>#26</div>
-                            <div>$6.16 B</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 30px;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 50px;">
-                            <div>α</div>
-                            <div>0.76</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>β</div>
-                            <div>0.65</div>
-                        </div>
-                        <div style="display: flex; gap: 50px;">
-                            <div>Ω</div>
-                            <div>0.44</div>
-                        </div>
-                    </div>
-                        <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; gap: 80px; font-size: larger; font-weight: 800; padding-left: 40px;">
-                            <div>1D</div>
-                            <div>7D</div>
-                            <div>3D</div>
-                        </div>
-                        <div style="display: flex; gap: 60px; font-size: larger; padding-left: 20px;">
-                            <div>1.42%</div>
-                            <div>2.32%</div>
-                            <div>223.45%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
     </div>

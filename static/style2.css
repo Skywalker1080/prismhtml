@@ -137,3 +137,11 @@ html, body {
     padding-top: 50px;
 }
 
+.positive {
+    color: #00ff5f;  /* or any green color you prefer */
+}
+
+.negative {
+    color: #ff355b;  /* or any red color you prefer */
+}
+

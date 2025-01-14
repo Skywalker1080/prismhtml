@@ -12,271 +12,79 @@
 
         <div class="col">
             <div class="top-gainer">
-                <div class="top-loser"><img src="Top Gainer.png"></div><br>
-
+                <div class="top-loser" style="padding-left: 20px;"><img src="{{ url_for('static', filename='Top Loser.png') }}"></div><br>
+                {% for coin in coin1 %}
                 <div class="coin-card">
                     <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
+                        <div class="logo"><img src="{{ coin.logo }}"></div>
                         <div>
                             <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
+                                <div style="font-size: 25px; font-weight: 500;">{{ coin.symbol }}</div>
+                                <div style="font-size: 20px;">$ {{ coin.price }}</div>
                             </div>
                             <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
+                                <div>#{{ coin.cmc_rank }}</div>
+                                <div>${{ coin.market_cap }} B</div>
+                                <div style="color: {% if coin.percent_change24h >= 0 %}#00ff5f{% else %}#ff355b{% endif %}; font-weight: bold;">{{ coin.percent_change24h }} %</div>
                             </div>
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
+                    <div style="display: flex; gap: 20px; font-size: 14px; padding-left: 30px">
                         <div>Durability</div>
                         <div>|</div>
                         <div>Momentum</div>
                         <div>|</div>
                         <div>Valuation</div>
                     </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
+                    <div style="display: flex; gap: 55px; font-size: 25px; padding-left:20px;">
+                        <div style="color: {% if coin.Durability_Score >= 0 %}#00ff5f{% else %}#ff355b{% endif %};">{{ coin.Durability_Score }}</div>
+                        <div style="color: {% if coin.Momentum_Score >= 0 %}#00ff5f{% else %}#ff355b{% endif %};">{{ coin.Momentum_Score }}</div>
+                        <div style="color: {% if coin.Valuation_Score    >= 0 %}#00ff5f{% else %}#ff355b{% endif %};">{{ coin.Valuation_Score }}</div>
                     </div>
 
 
                 </div><br>
-
-                <div class="coin-card">
-                    <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
-                        <div>
-                            <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
-                            </div>
-                            <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
-                        <div>Durability</div>
-                        <div>|</div>
-                        <div>Momentum</div>
-                        <div>|</div>
-                        <div>Valuation</div>
-                    </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
-                    </div>
-
-
-                </div><br>
-
-                <div class="coin-card">
-                    <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
-                        <div>
-                            <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
-                            </div>
-                            <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
-                        <div>Durability</div>
-                        <div>|</div>
-                        <div>Momentum</div>
-                        <div>|</div>
-                        <div>Valuation</div>
-                    </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
-                    </div>
-
-
-                </div><br>
-
-                <div class="coin-card">
-                    <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
-                        <div>
-                            <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
-                            </div>
-                            <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
-                        <div>Durability</div>
-                        <div>|</div>
-                        <div>Momentum</div>
-                        <div>|</div>
-                        <div>Valuation</div>
-                    </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
-                    </div>
-
-
-                </div>
-
+                {% endfor %}
             </div>
         </div>
 
         <div class="col">
             <div class="top-gainer">
-                <div class="top-loser"><img src="Top Loser.png"></div><br>
-
+                <div class="top-loser" style="padding-left: 20px;"><img src="{{ url_for('static', filename='Top Gainer.png') }}""></div><br>
+                {% for coin in coin2 %}
                 <div class="coin-card">
                     <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
+                        <div class="logo"><img src="{{ coin.logo }}"></div>
                         <div>
                             <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
+                                <div style="font-size: 25px; font-weight: 500;">{{ coin.symbol }}</div>
+                                <div style="font-size: 20px;">$ {{ coin.price }}</div>
                             </div>
                             <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
+                                <div>#{{ coin.cmc_rank }}</div>
+                                <div>${{ coin.market_cap }} B</div>
+                                <div style="color: {% if coin.percent_change24h >= 0 %}#00ff5f{% else %}#ff355b{% endif %}; font-weight: bold;">{{ coin.percent_change24h }} %</div>
                             </div>
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
+                    <div style="display: flex; gap: 20px; font-size: 14px; padding-left: 30px;">
                         <div>Durability</div>
                         <div>|</div>
                         <div>Momentum</div>
                         <div>|</div>
                         <div>Valuation</div>
                     </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
+                    <div style="display: flex; gap: 55px; font-size: 25px; padding-left:20px;">
+                        <div style="color: {% if coin.Durability_Score >= 0 %}#00ff5f{% else %}#ff355b{% endif %};">{{ coin.Durability_Score }}</div>
+                        <div style="color: {% if coin.Momentum_Score >= 0 %}#00ff5f{% else %}#ff355b{% endif %};">{{ coin.Momentum_Score }}</div>
+                        <div style="color: {% if coin.Valuation_Score    >= 0 %}#00ff5f{% else %}#ff355b{% endif %};">{{ coin.Valuation_Score }}</div>
                     </div>
 
 
                 </div><br>
-
-                <div class="coin-card">
-                    <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
-                        <div>
-                            <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
-                            </div>
-                            <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
-                        <div>Durability</div>
-                        <div>|</div>
-                        <div>Momentum</div>
-                        <div>|</div>
-                        <div>Valuation</div>
-                    </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
-                    </div>
-
-
-                </div><br>
-
-                <div class="coin-card">
-                    <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
-                        <div>
-                            <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
-                            </div>
-                            <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
-                        <div>Durability</div>
-                        <div>|</div>
-                        <div>Momentum</div>
-                        <div>|</div>
-                        <div>Valuation</div>
-                    </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
-                    </div>
-
-
-                </div><br>
-
-                <div class="coin-card">
-                    <div style="display: flex; flex-direction: row; gap: 20px;">
-                        <div class="logo"><img src="Bitcoin.svg.png", alt="BTC"></div>
-                        <div>
-                            <div style="display: flex; gap: 75px;">
-                                <div style="font-size: 25px; font-weight: 200;">MOCA</div>
-                                <div style="font-size: 20px;">$4.00</div>
-                            </div>
-                            <div style="display: flex; gap: 25px;">
-                                <div>#232</div>
-                                <div>$310.97 M</div>
-                                <div style="color: green; font-weight: bold;">47.1%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 20px; font-size: 14px;">
-                        <div>Durability</div>
-                        <div>|</div>
-                        <div>Momentum</div>
-                        <div>|</div>
-                        <div>Valuation</div>
-                    </div>
-                    <div style="display: flex; gap: 75px; font-size: 25px;">
-                        <div>34.5</div>
-                        <div>54.5</div>
-                        <div>74.5</div>
-                    </div>
-
-
-                </div>
-
+                {% endfor %}
             </div>
         </div>
         
